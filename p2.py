@@ -1,9 +1,8 @@
-#wapp to convert farhrenheit into celcius which would be supplied from command line
+#wapp for pattern generation
 
-import sys
-fah=float(sys.argv[1])
+num=int(input("enter the number of lines:"))
 
-c=(fah-32)/1.8
-print("celcius",c)
-print("celcius %5.2f"%c)
-
+for i in range(num):
+	for j in range(i+1):
+		print("*",end=' ')
+	print()

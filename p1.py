@@ -1,13 +1,13 @@
-#wapp to find area of circle and circum of the circle for which radius is supplied by the user
+#wapp to find factorial of a number provided by the user
 
-s1=input("enter radius")
-rad=float(s1)
+num=int(input("enter a number:"))
 
-import math
-aoc=math.pi*rad**2
-print("areaof circle",aoc)
-print("area of circle %7.2f"%aoc)
-
-coc=2*math.pi*rad
-print("circum of circle",coc)
-print("circum of circle %8.3f"%coc)
+if(num<0):
+	print("enter positive number")
+elif(num==0):
+	print("ans=",1)
+else:
+	fact=1
+	for i in range(1,num+1):
+		fact=fact*i
+	print("ans=",fact)

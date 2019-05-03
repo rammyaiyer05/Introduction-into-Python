@@ -1,13 +1,10 @@
-#wapp to read marks from user and give the grade
-#A marks>90,B>75,C>60 else D
+#wapp for pattern generation
 
-mar=int(input("enter your marks"))
+num=int(input("enter the number of lines:"))
 
-if(mar>90):
-	print("Grade A")
-elif(mar>75):
-	print("Grade B")
-elif(mar>60):
-	print("Grade C")
-else:
-	print("Grade D")
+k=65
+for i in range(num):
+	for j in range(i+1):
+		print(chr(k),end=' ')
+	print()
+	k=k+1

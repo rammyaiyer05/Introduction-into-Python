@@ -1,8 +1,17 @@
-#wapp to find whether the year is leap or not. Year is given from cmd line
+#wapp to find max and min from elements provided by the user
 
-year=int(input("Enter the year:"))
+import array
+num=array.array('i',[])
 
-if((year % 100!=0 and year%4==0) or (year%100==0 and year%400==0)):
-	print("It is a leap year")
-else:
-	print("It is not a leap year")
+n=int(input("enter the number of elements"))
+for i in range(n):
+	ele=int(input("enter the element"))
+	num.append(ele)
+
+max=min=num[0]
+for i in range(len(num)):
+	if num[i]>max:
+		max=num[i]
+	if num[i]<min:
+		min=num[i]
+print("Max",max,"Min",min)
